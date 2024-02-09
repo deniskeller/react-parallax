@@ -1,0 +1,38 @@
+.main section {
+  min-height: 100dvh;
+	overflow: hidden;
+}
+
+.section1 {
+  background: lightcyan;
+	
+}
+
+.section2 {
+  background: lightblue;
+}
+
+.Ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+}
+
+.Ul li {
+  display: inline-block;
+  font-size: 72px;
+  line-height: normal;
+  font-weight: 500;
+}
+
+
+.Circle {
+	width: 100px;
+	height: 100px;
+	background: green;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
