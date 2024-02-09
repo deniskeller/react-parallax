@@ -1,3 +1,6 @@
+.main {
+	overflow: hidden;
+}
 .main section {
   min-height: 100dvh;
 	overflow: hidden;
