@@ -11,22 +11,22 @@ const Main = () => {
 
       for (let i = 0; i < targets.length; i++) {
         const elem = targets[i] as HTMLLIElement;
+        const rate = Number(elem.getAttribute('data-rate'));
 
-        if (elem.dataset.rate) {
-          const pos = window.scrollY * +elem.dataset.rate;
-          elem.style.transform = 'translate3d(0px, ' + pos + 'px, 0px)';
-        }
+        const pos = window.scrollY * rate;
+        elem.style.transform = 'translate3d(0px, ' + pos + 'px, 0px)';
       }
     }
 
     if (parallaxCircleRef.current) {
       const target = parallaxCircleRef.current;
-      if (target.dataset.ratex && target.dataset.ratey) {
-        let posX = window.scrollY * +target.dataset.ratex;
-        let posY = window.scrollY * +target.dataset.ratey;
-        target.style.transform =
-          'translate3d(' + posX + 'px, ' + posY + 'px, 0px)';
-      }
+      const rateX = Number(target.getAttribute('data-ratex'));
+      const rateY = Number(target.getAttribute('data-ratey'));
+
+      let posX = window.scrollY * rateX;
+      let posY = window.scrollY * rateY;
+      target.style.transform =
+        'translate3d(' + posX + 'px, ' + posY + 'px, 0px)';
     }
   };
 
